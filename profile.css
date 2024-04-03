@@ -1,0 +1,47 @@
+h1#nick{
+    text-align: center;
+    color:orangered;
+}
+h1#nic{
+    text-align: center;
+    color:lightyellow;
+
+}
+
+    h1#NI{
+        text-align: center;
+        text-transform: uppercase;
+        color:green;
+    }
+
+body{
+    background-color:black;
+    background-repeat:no-repeat;
+
+}
+h2{
+    color:lightyellow;
+    margin: 40px;
+    
+}
+ table tr,th,td{
+    text-align: center;
+    margin-left: 50px;
+    padding: 50px;  
+     
+}
+th,td,ul{
+    color: white;
+}
+h2{
+    color:lightyellow;
+
+}
+h1{
+    color:lightyellow;
+
+}
+p{
+    color:lightyellow;
+}
+
