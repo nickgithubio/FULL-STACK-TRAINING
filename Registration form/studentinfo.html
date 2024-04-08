@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./BOOTSTRAP2/css/bootstrap.css" rel="stylesheet">
+    <script src="./BOOTSTRAP2/js/bootstrap.js"></script>
+    <title>Student Registration</title>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center flex-column text-center">
+        <h1>Student Registration</h1>
+        <div class="border border-1 border-danger rounded p-2 col-4 mx-auto">
+            <form name="studentFrm" class="text-start" onsubmit="return validate();">
+                <div>
+                    <label>Enter Student Name</label><br>
+                    <input type="text" name="name" id="name" class="col-12" /><br>
+                    <p id="nameErr" class="text-danger"></p>
+                </div>
+                <div>
+                    <label>Enter Mobile Number</label><br>
+                    <input type="tel" maxlength="12" name="mobile" id="mobile" class="col-12" /><br>
+                    <p id="mobileErr" class="text-danger"></p>
+                </div>
+                <div>
+                    <label>Enter E-mail</label><br>
+                    <input type="email" maxlength="40" name="email" id="email" class="col-12" /><br>
+                    <p id="emailErr" class="text-danger"></p>
+                </div>
+                <div>
+                    <label>Select Your Hobby</label><br>
+                    <div class="border border-1 border-danger rounded p-2">
+                        <input type="checkbox" name="hobbies" id="hobbies" value="Music"/>Music
+                        <input type="checkbox" name="hobbies" id="hobbies" value="Dancing" />Dancing
+                        <input type="checkbox" name="hobbies" id="hobbies" value="Singing" />Singing
+                        <p id="hobbieErr" class="text-danger"></p>
+                    </div>
+                </div>
+                <div class="border border-1 border-danger rounded p-2 my-4">
+                    <label>Select Your Language</label><br>
+                    <select name="lang">
+                        <option value="Select">Select</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Koltin">Kotlin</option>
+                    </select>
+                    <p id="langErr" class="text-danger"></p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-warning" type="submit" name="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="./studentinfo.js"></script>
+</body>
+
+</html>
