@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/calc.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="beech">
+        <div class="calculator">
+            <div>
+                <input style="text-align: right;" type="text" id="result" class="answer" value=''>
+            </div>
+            <div class="numbers">
+                <input type="button" class="design" value="AC" onclick="insertC()">
+                <input type="button" class="design" value="%" onclick="insert('%')">
+                <input type="button" class="design" value="DE" onclick="insert1('')">
+                <input type="button" class="design colour" value="/" onclick="insert('/')">
+                <input type="button" class="design" value="7" onclick="insert('7')">
+                <input type="button" class="design" value="8" onclick="insert('8')">
+                <input type="button" class="design" value="9" onclick="insert('9')">
+                <input type="button" class="design colour" value="" id="multiply" onclick="insert('')">
+                <input type="button" class="design" value="4" onclick="insert('4')">
+                <input type="button" class="design" value="5" onclick="insert('5')">
+                <input type="button" class="design" value="6" onclick="insert('6')">
+                <input type="button" class="design colour" value="-" onclick="insert('-')">
+                <input type="button" id="one" class="design" onclick="insert('1')" value="1">
+                <input type="button" class="design" onclick="insert('2')" value="2">
+                <input type="button" class="design" value="3" onclick="insert('3')">
+                <input type="button" class="design colour" value="+" onclick="insert('+')">
+                <input type="button" class="design" value="00" onclick="insert('00')">
+                <input type="button" class="design" value="0" onclick="insert('0')">
+                <input type="button" class="design" value="." onclick="insert('.')">
+                <input type="button" class="design colour" value="=" onclick="insertequal()">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function insert(x) {
+            document.getElementById("result").value += x;
+        }
+        function insert1() {
+            let a = document.getElementById("result").value;
+            let b = a.slice(0, -1);
+            document.getElementById("result").value = b;
+        }
+
+        function insertC() {
+            document.getElementById("result").value = '';
+        }
+
+        function insertequal() {
+            let x = document.getElementById("result").value;
+            let y = eval(x);
+            document.getElementById("result").value = y;
+        }
+
+
+    </script>
+</body>
+
+</html>
